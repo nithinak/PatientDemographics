@@ -4,6 +4,9 @@ using System.Text;
 
 namespace PaitentServices
 {
+    /// <summary>
+    /// Inteface to define the methods
+    /// </summary>
     interface IPatientDemographics
     {
 

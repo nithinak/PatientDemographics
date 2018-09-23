@@ -6,9 +6,15 @@ using BusinessEntity;
 using PatientDataAccess;
 
 namespace PaitentServices
-{
+{/// <summary>
+/// Service Calss which will impliment the interface
+/// </summary>
     public class PatientServices : IPatientDemographics
     {
+     /// <summary>
+    /// Fetch the data from databse using EntityFrame work
+    /// </summary>
+    /// <returns></returns>
         public List<PatientDetails> GetPatientDetails()
         {
             List<PatientDetails> patientDetails = new List<PatientDetails>();
@@ -37,7 +43,10 @@ namespace PaitentServices
             return patientDetails;
 
         }
-
+        /// <summary>
+        /// Method to Save the data into the database using EntityFrameWork
+        /// </summary>
+        /// <param name="patientDetails"></param>
         public void SavePatientDetails(Object patientDetails )
         {
             using (PatientDemographicsEntities db = new PatientDemographicsEntities())

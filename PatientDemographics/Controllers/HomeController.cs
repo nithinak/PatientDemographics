@@ -11,7 +11,10 @@ namespace PatientDemographics.Controllers
 
     public class HomeController : Controller
     {
-
+        /// <summary>
+        /// Action method to fetch the Data Using WebApi
+        /// </summary>
+        /// <returns>Status Code Ok with 200 PatientDetails</returns>
         public ActionResult Index()
         {
             IEnumerable<PatientDetails> patientDetails = null;
@@ -38,6 +41,11 @@ namespace PatientDemographics.Controllers
         {
             return View();
         }
+        /// <summary>
+        /// Create a new patient persoanl information
+        /// </summary>
+        /// <param name="createPatientDetails"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult create(CreatePatientDetails createPatientDetails)
         {
@@ -71,7 +79,7 @@ namespace PatientDemographics.Controllers
                         return RedirectToAction("Index");
                     }
                 }
-                ModelState.AddModelError(string.Empty, "Server Error. Please contact administrator.");
+               
 
                 return View(PatientDetails);
 

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 
 namespace BusinessEntity
 {
-    
+    /// <summary>
+    /// Business Entity to fetch the data from Databes and Bind 
+    /// </summary>
     public class PatientDetails
     {
         

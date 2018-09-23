@@ -15,7 +15,14 @@ namespace PatientDemographics.Controllers
 {
     public class PatientDemoGraphicController : ApiController
     {
+        /// <summary>
+        /// patientServices Private Object of PatientServices
+        /// </summary>
         private readonly PatientServices patientServices = new PatientServices();
+        /// <summary>
+        /// Get the Personal Details of Patients from the DataBase.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IHttpActionResult GetPatientPersonalDetails()
         {
@@ -55,7 +62,11 @@ namespace PatientDemographics.Controllers
             }
 
         }
-
+        /// <summary>
+        /// Save the Patient Personal Data into the Database
+        /// </summary>
+        /// <param name="patientDetails"></param>
+        /// <returns></returns>
         [HttpPost]
         public IHttpActionResult SavePatientDetails(PatientDetails patientDetails)
         {

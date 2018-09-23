@@ -7,6 +7,9 @@ using System.Xml.Serialization;
 
 namespace PaitentServices
 {
+    /// <summary>
+    /// Helper class for Converting XLM to Object and Object to XML
+    /// </summary>
    public class PatientHelper
     {
         public static string GetXMLFromObject(object o)
@@ -22,6 +25,8 @@ namespace PaitentServices
             catch (Exception ex)
             {
                 //Handle Exception Code
+                throw new Exception(ex.Message);
+               
             }
             finally
             {
@@ -49,6 +54,7 @@ namespace PaitentServices
             catch (Exception exp)
             {
                 //Handle Exception Code
+                throw new Exception(exp.Message);
             }
             finally
             {
